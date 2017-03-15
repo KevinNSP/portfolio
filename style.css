@@ -1,0 +1,74 @@
+header {
+  height: 150px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 30px;
+  display: inline-block;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  margin: 30px;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbutton:hover {
+  opacity: .75;
+  cursor: url("assets/like1-512.png");
+}
+
+.icon-menu {
+  display: inline;
+  background-image: url(assets/burger.jpg);
+  background-size: 100%;
+  width: 50px;
+  height: 100px;
+  float: right;
+}
+
+.icon-menu:hover .navbar{
+  display: inline;
+}
+
+@media screen and (min-width: 700px) {
+
+  body {
+    background-color: lightgrey;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .navbar {
+    display: inline;
+  }
+
+  .navbar a {
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+    /*transform: rotate(-30deg);*/
+    width: 100px;
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
