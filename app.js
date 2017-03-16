@@ -4,13 +4,18 @@
 
 var projects = [];
 
-function Projects (rawData) {
-  this.title = rawData.title;
-  this.details = rawData.details;
-  this.background = rawDate.background;
-  this.projectUrl = rawDate.projectUrl;
-};
+function Projects (projectOptions) {
+  this.title = projectOptions.title;
+  this.details = projectOptions.details;
+  this.picture = projectOptions.picture;
+  this.projectUrl = projectOptions.projectUrl;
+}
 
-Article.prototype.toHtml = function() {
-  var $newProject = $('project.template').clone();
+Projects.prototype.toHtml = function() {
+  var $newProject = $('project.template').clone().removeClass('template');
+
+  $newProject.find(this.details);
+  $newProject.find('h1').text(this.title);
+  $newProject.find('.projectPic').text(this.picture);
+  $newProject.find('a').text(this.projectURL);
 };
