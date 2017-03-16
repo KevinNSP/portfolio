@@ -41,7 +41,17 @@ nav {
   display: inline;
 }
 
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
 @media screen and (min-width: 700px) {
+
+  header img {
+    display: inline;
+    max-width: 100%;
+  };
 
   body {
     background-color: lightgrey;
