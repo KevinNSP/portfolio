@@ -12,23 +12,24 @@ function Projects (projectOptions) {
 }
 
 Projects.prototype.toHtml = function() {
-  var $newProject = $('project.template').clone().removeClass('template');
+  var $newProject = $('.projectTemplate').clone().removeClass('projectTemplate');
 
-  $newProject.find(this.details);
+  // $newProject.find(this.details);
   $newProject.find('h1').text(this.title);
-  $newProject.find('.projectPic').text(this.picture);
-  $newProject.find('a').text(this.projectURL);
+  $newProject.find('.projectPic').attr('src', this.picture);
+  $newProject.find('.projectDesription').text(this.details);
+  // $newProject.find('a').text(this.projectURL);
   return $newProject;
 };
 
 console.log();
 
-sourceData.forEach(function(ele) {
+rawProjectData.forEach(function(ele) {
   allProjects.push(new Projects(ele));
 });
 
 console.log(allProjects);
 
 allProjects.forEach(function(a){
-  $('#articles').append(a.toHtml());
+  $('#projects').append(a.toHtml());
 });

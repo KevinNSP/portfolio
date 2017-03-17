@@ -30,7 +30,7 @@ nav {
 
 .icon-menu {
   display: inline;
-  background-image: url(assets/burger.jpg);
+  background-image: url("../assets/burger.jpg");
   background-size: 100%;
   width: 50px;
   height: 100px;
