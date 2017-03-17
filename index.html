@@ -15,6 +15,7 @@
       <div class="icon-menu"></div>
       <div class="navbar">
         <nav>
+          <a class="navButton" href="#home">Home</a>
           <a class="navbutton" href="#projects">Projects</a>
           <a class="navbutton" href="#github">GitHub</a>
           <a class="navbutton" href="#about">About Me</a>
@@ -23,21 +24,31 @@
     </header>
 
     <main>
-      <section id="projects" class="projectsContent">
-        <article class="projectTemplate">
-          <header>
-            <h1>Title</h1>
-            <div class="dateInfo">
-              published <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
-          </header>
-          <section class="projectDesription"></section>
-          <img class="projectPic"></img>
-        </article>
-      </section>
-      <section>
-
-      </section>
+      <div class="allContent">
+        <section id="projects" class="projectsContent">
+          <article class="projectTemplate">
+            <header>
+              <h1>Title</h1>
+              <div class="dateInfo">
+                published <time pubdate datetime="2000-01-01">Publish Time</time>
+              </div>
+            </header>
+            <section class="projectDesription"></section>
+            <img class="projectPic"></img>
+          </article>
+        </section>
+        <section id="about" class"aboutMeContent">
+          <body>
+            <h1>About me!</h1>
+            <h2>Things I like</h2>
+            <ul>
+              <li>Cars</li>
+              <li>Travel</li>
+              <li>Coding</li>
+            </ul>
+          </body>
+        </section>
+      </div>
 
     </main>
     <footer>
@@ -45,6 +56,9 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/projectData.js"></script>
+    <script type="text/javascript" src="scripts/projectsView.js">
+
+    </script>
     <script type="text/javascript" src="scripts/project.js"></script>
   </body>
 </html>
