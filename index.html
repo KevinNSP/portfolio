@@ -8,6 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script>
+      <h1>{{title}}</h1>
+      <p>{{details}}</p>
+      <p>{{picture}}</p>
+      <hr>
+    </script>
+
   </head>
   <body>
     <header>
@@ -26,7 +34,7 @@
     <main>
       <div class="allContent">
         <section id="projects" class="projectsContent">
-          <article class="projectTemplate">
+          <!-- <article class="projectTemplate">
             <header>
               <h1>Title</h1>
               <div class="dateInfo">
@@ -35,7 +43,12 @@
             </header>
             <section class="projectDesription"></section>
             <img class="projectPic"></img>
-          </article>
+          </article> -->
+          <script>
+            <h1>{{title}}</h1>
+            <p>{{details}}</p>
+            <p>{{picture}}</p>
+          </script>
         </section>
         <section id="about" class"aboutMeContent">
           <body>
@@ -56,9 +69,10 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/projectData.js"></script>
-    <script type="text/javascript" src="scripts/projectsView.js">
+    <script type="text/javascript" src="scripts/projectsView.js"></script>
+    <script type="text/javascript" src="scripts/project.js"></script>
+    <script id="entry/template" type="text/x-handlebars-template" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js">
 
     </script>
-    <script type="text/javascript" src="scripts/project.js"></script>
   </body>
 </html>
