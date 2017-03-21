@@ -29,11 +29,12 @@ var projectsView = [];
 //   $('.navbar').on('click', '.navbutton', function() {
 //     console.log('click');
 //     $('.mainContent').hide();
-//     $('#' + $(this).data('.mainContent')).fadeIn();
+//     console.log('hidden');
+//     $('.mainContent').fadeIn();
 //     console.log(this);
 //   });
 //
 //   $('.navbar .navbutton:first').click();
 // };
-
+//
 // projectsView.handleMainNav()
