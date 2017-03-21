@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<!-- had to make a change to pull on git -->
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kevin Schmidt</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
-    <script>
-      <h1>{{title}}</h1>
-      <p>{{details}}</p>
-      <p>{{picture}}</p>
-      <hr>
+    <script id="projectsTemplate" type="text/x-handlebars-template">
+      <article class="clearfix" data-category="{{title}}">
+        <h2>{{title}}</h2>
+        <section class="project-details">{{{details}}}</section>
+        <img src="{{picture}}">
+      </article>
     </script>
 
   </head>
   <body>
     <header>
+      <img src="https://images.unsplash.com/40/KJyFV5SZSweiYGhMhrqC_MD4817.jpg" id="background" alt="">
       <h1>Kevin Schmidt</h1>
       <div class="icon-menu"></div>
       <div class="navbar">
@@ -30,49 +33,27 @@
         </nav>
       </div>
     </header>
-
     <main>
       <div class="allContent">
-        <section id="projects" class="projectsContent">
-          <!-- <article class="projectTemplate">
-            <header>
-              <h1>Title</h1>
-              <div class="dateInfo">
-                published <time pubdate datetime="2000-01-01">Publish Time</time>
-              </div>
-            </header>
-            <section class="projectDesription"></section>
-            <img class="projectPic"></img>
-          </article> -->
-          <script>
-            <h1>{{title}}</h1>
-            <p>{{details}}</p>
-            <p>{{picture}}</p>
-          </script>
-        </section>
-        <section id="about" class"aboutMeContent">
-          <body>
-            <h1>About me!</h1>
-            <h2>Things I like</h2>
-            <ul>
-              <li>Cars</li>
-              <li>Travel</li>
-              <li>Coding</li>
-            </ul>
-          </body>
+        <section id="projects" class="mainContent"></section>
+        <!-- STUFF GOES HEREEEEEE -->
+        <section id='about' class ="mainContent">
+          <h2>About me!</h2>
+          <h3>Things I like</h3>
+          <ul>
+            <li>Cars</li>
+            <li>Travel</li>
+            <li>Coding</li>
+          </ul>
         </section>
       </div>
-
     </main>
     <footer>
-
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/projectData.js"></script>
-    <script type="text/javascript" src="scripts/projectsView.js"></script>
     <script type="text/javascript" src="scripts/project.js"></script>
-    <script id="entry/template" type="text/x-handlebars-template" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js">
-
-    </script>
+    <script type="text/javascript" src="scripts/projectsView.js"></script>
   </body>
 </html>

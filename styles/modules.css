@@ -1,0 +1,10 @@
+#background {
+  z-index: -99999;
+  position: fixed;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+
+}
