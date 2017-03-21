@@ -29,7 +29,7 @@
     display: inline;
   }
 
-  .navbar a {
+  .navbar li {
     font-family: 'Open Sans', sans-serif;
     display: inline;
     /*transform: rotate(-30deg);*/
