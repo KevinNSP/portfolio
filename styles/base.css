@@ -1,0 +1,35 @@
+header {
+  height: 150px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 30px;
+  display: inline-block;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  margin: 30px;
+}
+
+@media screen and (min-width: 700px) {
+
+  body {
+    background-color: lightgrey;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+}

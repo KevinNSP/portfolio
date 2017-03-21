@@ -1,7 +1,5 @@
 'use strict';
 
-// changes for pull request
-
 var allProjects = [];
 
 function Projects (projectOptions) {
@@ -12,24 +10,15 @@ function Projects (projectOptions) {
 }
 
 Projects.prototype.toHtml = function() {
-  var $newProject = $('.projectTemplate').clone().removeClass('projectTemplate');
-
-  // $newProject.find(this.details);
-  $newProject.find('h1').text(this.title);
-  $newProject.find('.projectPic').attr('src', this.picture);
-  $newProject.find('.projectDesription').text(this.details);
-  // $newProject.find('a').text(this.projectURL);
-  return $newProject;
+  var source = $('#projectsTemplate').text();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
-
-console.log();
 
 rawProjectData.forEach(function(ele) {
   allProjects.push(new Projects(ele));
 });
 
-console.log(allProjects);
-
-allProjects.forEach(function(a){
-  $('#projects').append(a.toHtml());
+allProjects.forEach(function(data){
+  $('#projects').append(data.toHtml());
 });
