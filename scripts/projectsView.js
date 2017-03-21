@@ -16,13 +16,25 @@ var projectsView = [];
 //   });
 // };
 
-projectsView.handleMainNav = function () {
-  $('.navbar').on('click', 'a[href="#about"]', function() {
-    console.log(this);
-    $('.projectsContent, .aboutMeContent').hide();
-    $('.aboutMeContent').fadeIn('slow');
-  });
-  $('.main-nav .tab:first').click();
-};
+// projectsView.handleMainNav = function () {
+//   $('.navbar').on('click', 'a[href="#about"]', function() {
+//     console.log(this);
+//     $('.projectsContent, .aboutMeContent').hide();
+//     $('.aboutMeContent').fadeIn('slow');
+//   });
+//   $('.main-nav .tab:first').click();
+// };
 
-projectsView.handleMainNav();
+// projectsView.handleMainNav = function () {
+//   $('.navbar').on('click', '.navbutton', function() {
+//     console.log('click');
+//     $('.mainContent').hide();
+//     console.log('hidden');
+//     $('.mainContent').fadeIn();
+//     console.log(this);
+//   });
+//
+//   $('.navbar .navbutton:first').click();
+// };
+//
+// projectsView.handleMainNav()
