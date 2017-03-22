@@ -7,7 +7,15 @@ h1 {
   margin-top: 20px;
   margin-left: 20px;
   font-size: 30px;
-  display: inline-block;
+  display: inline;
+}
+
+h2 {
+  display: inline;
+}
+
+header ul {
+  display: inline;
 }
 
 main {
@@ -16,6 +24,8 @@ main {
 }
 
 nav {
+  float: right;
+  display: inline;
   margin: 30px;
 }
 

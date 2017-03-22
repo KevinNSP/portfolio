@@ -1,6 +1,5 @@
 'use strict';
 
-var allProjects = [];
 
 function Projects (projectOptions) {
   this.title = projectOptions.title;
@@ -9,6 +8,8 @@ function Projects (projectOptions) {
   this.projectUrl = projectOptions.projectUrl;
 }
 
+Projects.all = [];
+
 Projects.prototype.toHtml = function() {
   var source = $('#projectsTemplate').text();
   var templateRender = Handlebars.compile(source);
@@ -16,9 +17,9 @@ Projects.prototype.toHtml = function() {
 };
 
 rawProjectData.forEach(function(ele) {
-  allProjects.push(new Projects(ele));
+  Projects.all.push(new Projects(ele));
 });
 
-allProjects.forEach(function(data){
+Projects.all.forEach(function(data){
   $('#projects').append(data.toHtml());
 });
