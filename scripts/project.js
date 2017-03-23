@@ -11,8 +11,7 @@ function Projects (projectOptions) {
 Projects.all = [];
 
 Projects.prototype.toHtml = function() {
-  var source = $('#projectsTemplate').text();
-  var templateRender = Handlebars.compile(source);
+  var templateRender = Handlebars.compile($('#projectsTemplate').text());
   return templateRender(this);
 };
 
@@ -20,6 +19,18 @@ rawProjectData.forEach(function(ele) {
   Projects.all.push(new Projects(ele));
 });
 
-Projects.all.forEach(function(data){
-  $('#projects').append(data.toHtml());
-});
+Projects.fetchAll = function() {
+  if(localStorage.rawProjectData) {
+    Projects.loadAll(JSON.parse(localStorage.rawProjectData));
+    projectsView.initIndexPage();
+  } else {
+    $.getJSON('data/projectsData.json')
+    .then(function(data) {
+      localStorage.rawProjectData = JSON.stringify(data);
+      Projects.loadAll(data);
+      projectsView.initIndexPage();
+    }, function(err) {
+      console.error(err);
+    });
+  }
+}

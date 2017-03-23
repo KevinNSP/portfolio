@@ -16,20 +16,12 @@ projectsView.handleMainNav = function () {
   });
 };
 
-projectsView.handleMainNav()
 
-Projects.fetchAll = function() {
-  if(localStorage.rawProjectData) {
-    Projects.loadAll(JSON.parse(localStorage.rawProjectData));
-    projectsView.initIndexPage();
-  } else {
-    $.getJSON('data/projectsData.json')
-    .then(function(data) {
-      localStorage.rawProjectData = JSON.stringify(data);
-      Projects.loadAll(data);
-      projectsView.initIndexPage();
-    }, function(err) {
-      console.error(err);
-    });
+Projects.loadAll() = function() {
+  localStorage.rawData() {}
+    Projects.loadAll(JSON.parse(localStorage.rawData));
+    projectsView.
   }
 }
+
+projectsView.handleMainNav()
