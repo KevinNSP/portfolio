@@ -1,6 +1,5 @@
 'use strict';
 
-var allProjects = [];
 
 function Projects (projectOptions) {
   this.title = projectOptions.title;
@@ -9,16 +8,18 @@ function Projects (projectOptions) {
   this.projectUrl = projectOptions.projectUrl;
 }
 
+const projects = [];
+
 Projects.prototype.toHtml = function() {
-  var source = $('#projectsTemplate').text();
-  var templateRender = Handlebars.compile(source);
+  var templateRender = Handlebars.compile($('#projectsTemplate').text());
   return templateRender(this);
 };
 
-rawProjectData.forEach(function(ele) {
-  allProjects.push(new Projects(ele));
-});
-
-allProjects.forEach(function(data){
-  $('#projects').append(data.toHtml());
-});
+$.getJSON('/data/projectsData.json', function(response) {
+  response.forEach(function(projectObject) {
+    projects.push(new Projects(projectObject))
+  });
+  projects.forEach(function(project) {
+    $('#projects').append(project.toHtml());
+  })
+})

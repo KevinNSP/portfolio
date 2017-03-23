@@ -20,6 +20,14 @@
   display: inline;
 }
 
+.articleDisplay {
+  display: inline;
+}
+
+.project-details {
+  display: inline;
+}
+
 @media screen and (min-width: 700px) {
   .icon-menu {
     display: none;
