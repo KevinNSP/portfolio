@@ -18,7 +18,7 @@ h2 {
 }
 
 header ul {
-  display: inline;
+  float: right;
     outline: 5px solid;
 }
 
