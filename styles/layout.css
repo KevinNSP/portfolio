@@ -20,12 +20,22 @@
   display: inline;
 }
 
-.articleDisplay {
-  display: inline;
+#projects {
+  display: inline-block;
+  width: 100%;
+  height: 500px;
+    outline: 5px solid red;
+}
+
+.projectDisplay {
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+    outline: 5px solid purple;
 }
 
 .project-details {
-  display: inline;
+  display: block;
 }
 
 @media screen and (min-width: 700px) {

@@ -1,5 +1,6 @@
 header {
   height: 150px;
+    outline: 5px solid;
 }
 
 h1 {
@@ -11,16 +12,24 @@ h1 {
 }
 
 h2 {
-  display: inline;
+  display: inline-block;
+  width: 100%;
+    outline: 5px solid;
 }
 
 header ul {
+  display: inline;
+    outline: 5px solid;
+}
+
+article {
   display: inline;
 }
 
 main {
   height: 100%;
   width: 100%;
+    outline: 5px solid;
 }
 
 nav {
