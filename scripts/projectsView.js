@@ -16,12 +16,11 @@ projectsView.handleMainNav = function () {
   });
 };
 
-
-Projects.loadAll() = function() {
-  localStorage.rawData() {}
-    Projects.loadAll(JSON.parse(localStorage.rawData));
-    projectsView.
-  }
-}
+// Projects.loadAll() = function() {
+//   localStorage.rawData() {}
+//     Projects.loadAll(JSON.parse(localStorage.rawData));
+//     projectsView.
+//   }
+// }
 
 projectsView.handleMainNav()

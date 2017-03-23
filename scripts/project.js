@@ -8,29 +8,18 @@ function Projects (projectOptions) {
   this.projectUrl = projectOptions.projectUrl;
 }
 
-Projects.all = [];
+const projects = [];
 
 Projects.prototype.toHtml = function() {
   var templateRender = Handlebars.compile($('#projectsTemplate').text());
   return templateRender(this);
 };
 
-rawProjectData.forEach(function(ele) {
-  Projects.all.push(new Projects(ele));
-});
-
-Projects.fetchAll = function() {
-  if(localStorage.rawProjectData) {
-    Projects.loadAll(JSON.parse(localStorage.rawProjectData));
-    projectsView.initIndexPage();
-  } else {
-    $.getJSON('data/projectsData.json')
-    .then(function(data) {
-      localStorage.rawProjectData = JSON.stringify(data);
-      Projects.loadAll(data);
-      projectsView.initIndexPage();
-    }, function(err) {
-      console.error(err);
-    });
-  }
-}
+$.getJSON('/data/projectsData.json', function(response) {
+  response.forEach(function(projectObject) {
+    projects.push(new Projects(projectObject))
+  });
+  projects.forEach(function(project) {
+    $('#projects').append(project.toHtml());
+  })
+})
