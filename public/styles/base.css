@@ -1,0 +1,70 @@
+header {
+  height: 150px;
+    outline: 5px solid;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 30px;
+  display: inline;
+}
+
+h2 {
+  display: inline-block;
+  width: 100%;
+    outline: 5px solid;
+}
+
+header ul {
+  float: right;
+    outline: 5px solid;
+}
+
+article {
+  display: inline;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+    outline: 5px solid;
+}
+
+nav {
+  float: right;
+  display: inline;
+  margin: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+@media screen and (min-width: 700px) {
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  body {
+    background-color: lightgrey;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+}
