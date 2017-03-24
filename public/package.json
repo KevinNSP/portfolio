@@ -1,0 +1,22 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "what?"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinNSP/portfolio.git"
+  },
+  "author": "Kevin Schmidt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinNSP/portfolio/issues"
+  },
+  "homepage": "https://github.com/KevinNSP/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

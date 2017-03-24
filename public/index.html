@@ -11,11 +11,11 @@
     <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
     <script id="projectsTemplate" type="text/x-handlebars-template">
-      <article class="articleDisplay" data-category="{{title}}">
+      <div class="projectDisplay" data-category="{{title}}">
+        <img src="{{picture}}">
         <h2>{{title}}</h2>
         <section class="project-details">{{{details}}}</section>
-        <img src="{{picture}}">
-      </article>
+      </div>
     </script>
 
   </head>
