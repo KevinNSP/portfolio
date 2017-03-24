@@ -1,6 +1,5 @@
 'use strict';
 
-
 function Projects (projectOptions) {
   this.title = projectOptions.title;
   this.details = projectOptions.details;
