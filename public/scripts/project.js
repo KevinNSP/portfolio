@@ -1,5 +1,7 @@
 'use strict';
 
+// TODO: Double check you have JSON file in your version and revert if necessary.
+
 function Projects (projectOptions) {
   this.title = projectOptions.title;
   this.details = projectOptions.details;

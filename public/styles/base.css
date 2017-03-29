@@ -1,3 +1,5 @@
+/* NOTE: Looks good here, you have main elements */
+
 header {
   height: 150px;
     outline: 5px solid;
@@ -55,7 +57,7 @@ a:visited {
   a:visited {
     color: white;
   }
-
+/* TODO: Might want to move this above the "a {}" section */
   body {
     background-color: lightgrey;
   }
