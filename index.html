@@ -1,14 +1,37 @@
 <!DOCTYPE html>
+<!-- TODO: FILE STRUCTURE: can use the general structure below as a guide:
+node_modules
+public
+  data
+    data.json
+  scripts
+    controllers
+      aboutController.js
+      articleController.js
+      routes.js
+    models
+      article.js
+    views
+      articleView.js
+  styles
+    fonts
+  vendor
+    scripts
+    styles
+  index.html
+package.json
+server.js
+ -->
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kevin Schmidt</title>
-    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/base.css">
-    <link rel="stylesheet" type="text/css" href="styles/layout.css">
-    <link rel="stylesheet" type="text/css" href="styles/modules.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/base.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/modules.css">
 
     <script id="projectsTemplate" type="text/x-handlebars-template">
       <div class="projectDisplay" data-category="{{title}}">
@@ -22,6 +45,7 @@
   <body>
     <header>
       <img src="https://images.unsplash.com/photo-1484501085877-500786457c48" id="background" alt="">
+      <!-- TODO: remove or add alt text. -->
       <h1>Kevin Schmidt</h1>
       <div class="icon-menu"></div>
       <div class="navbar">
@@ -37,11 +61,13 @@
     </header>
     <main>
       <div class="allContent">
+        <!-- TODO: Remove border outline -->
         <section id="projects" class="mainContent"></section>
         <!-- STUFF GOES HEREEEEEE -->
         <section id='about' class ="mainContent">
           <h2>About me!</h2>
           <h3>Things I like</h3>
+          <!-- TODO: Make text higher contrast -->
           <ul>
             <li>Cars</li>
             <li>Travel</li>
