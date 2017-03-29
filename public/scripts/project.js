@@ -1,5 +1,11 @@
 'use strict';
 
+(function(window) {
+
+console.log('are we here?');
+
+Projects.all = [];
+
 function Projects (projectOptions) {
   this.title = projectOptions.title;
   this.details = projectOptions.details;
@@ -7,18 +13,19 @@ function Projects (projectOptions) {
   this.projectUrl = projectOptions.projectUrl;
 }
 
-const projects = [];
-
 Projects.prototype.toHtml = function() {
   var templateRender = Handlebars.compile($('#projectsTemplate').text());
   return templateRender(this);
 };
 
-$.getJSON('/data/projectsData.json', function(response) {
-  response.forEach(function(projectObject) {
-    projects.push(new Projects(projectObject))
+$.getJSON('../data/projectsData.json', function(response) {
+  console.log('response this is the response', response);
+  response.map(function(projectObject) {
+    Projects.all.push(new Projects(projectObject))
   });
-  projects.forEach(function(project) {
+  Projects.all.map(function(project) {
     $('#projects').append(project.toHtml());
   })
 })
+
+})(window);
